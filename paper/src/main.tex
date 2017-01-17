@@ -1,0 +1,48 @@
+%===============================================================================
+% Author: Dmytro Bogatov
+% Email: dmytro@dbogatov.org
+% Template: IFAC meeting papers https://www.sharelatex.com/templates/journals/ifac-conferences-and-symposia
+% Copyright (c) 2016 Dmytro Bogatov
+%===============================================================================
+
+\documentclass{style}		% template
+
+\usepackage{graphicx}		% figures
+\usepackage{natbib}			% required for bibliography
+
+\usepackage{csquotes}		% qoutes
+\usepackage{multirow}		% merge rows
+\usepackage{amsmath}		% allow \text{} in math mode
+
+\usepackage{newclude}		% include without page break
+
+%===============================================================================
+
+\begin{document}
+
+	\begin{frontmatter}
+
+		\title{Analysis of a Dynamic Voluntary Contribution Mechanism Public Good Game} 
+
+		\author{Dmytro Bogatov} 
+
+		\address{Worcester Polytechnic Institute, Worcester, MA 01609 USA \\ (e-mail: dmytro@dbogatov.org)}
+
+		\include*{src/abstract}
+
+		\begin{keyword}
+			public good game, computational solution, Nash equilibrium
+		\end{keyword}
+
+	\end{frontmatter}
+	
+%===============================================================================
+
+	\include*{src/content}
+													
+	\appendix
+
+		\section{Computational Solution Code}
+		\section{Computational Results}
+	
+\end{document}
