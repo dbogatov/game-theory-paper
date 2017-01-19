@@ -7,7 +7,7 @@ COMPILATIONS=3
 echo "Generating document..."
 
 # LaTeX needs >1 compilations for references
-for i in {1..COMPILATIONS}
+for (( i=1; i<=$COMPILATIONS; i++ ))
 do
 	xelatex --interaction=${INTERACTION} -output-directory=${OUTDIR} -jobname=paper src/main.tex &>/dev/null
 done
