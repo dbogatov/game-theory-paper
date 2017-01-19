@@ -1,0 +1,99 @@
+% 
+% Author: Dmytro Bogatov - dmytro@dbogatov.org
+%
+
+\documentclass[xcolor={dvipsnames, usenames}, aspectratio=43]{beamer}
+
+
+\usepackage{ragged2e}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{bm}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{newclude}		% include without page break
+
+\newcommand{\tab}[1]{\hspace{.1\textwidth}\rlap{#1}}
+
+% Presentation Settings
+
+\usetheme{Antibes}
+\usefonttheme{serif}
+\usecolortheme{rose}
+
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline}
+{%
+	\leavevmode%
+	\hbox{\begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{author in head/foot}%
+	\usebeamerfont{author in head/foot}\insertshortauthor
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=0.8cm,rightskip=.3cm]{title in head/foot}%
+		\usebeamerfont{author in head/foot}\insertshorttitle
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+		\usebeamerfont{title in head/foot}\insertshortinstitute
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+
+\beamersetuncovermixins{\opaqueness<1>{25}}{\opaqueness<2->{15}}
+
+\begin{document}
+
+% Title Parameters
+
+	\title[Public Good Game]{Analysis of a Dynamic Voluntary Contribution Mechanism Public Good Game}
+	\subtitle[23rd IPE Conference]{23rd IPE Conference}
+	\author[Dmytro Bogatov]{Dmytro Bogatov and Jacqueline Ngo}
+	\date[\today]{February 26, 2016}
+	\institute[WPI]{Worcester Polytechnic Institute}
+	\logo{\includegraphics[ scale=0.1]{resources/logo.png}}
+
+	% Title Slide
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	% Table of Contents
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents[]
+	\end{frame} 
+
+	\begin{frame}
+		Why Solving the game is important?
+		\\~\\
+		To know optimal balance between investing in productive capacity and contributing to provision.
+		\\~\\
+		Examples of public goods
+		\begin{itemize}
+			\item
+				Good environment
+			\item
+				National Defense
+		\end{itemize}
+	\end{frame} 
+
+		\include*{src/sections/main}
+
+	\section{}
+
+	\begin{frame}
+		\begin{center}
+			\Huge Thank you!
+			\\~\\
+			\Large Questions?
+		\end{center}
+	\end{frame} 
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+\end{document}

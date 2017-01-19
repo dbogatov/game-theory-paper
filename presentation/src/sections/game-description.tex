@@ -1,0 +1,94 @@
+\section{Game Description}
+
+	\begin{frame}
+		\frametitle{The Game} 
+		
+		\begin{itemize}
+			\item
+				4 people in group for 10 periods
+			\item
+				Each period has two stages:
+				\begin{enumerate}
+					\item 
+						investment stage
+					\item
+						contribution stage
+				\end{enumerate}
+			\item
+				Endowments of 10 for each player in each period
+		\end{itemize}
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Investment Stage} 
+		
+		\begin{itemize}
+			\item
+				Players can increase their contribution productivity from the starting value of 0.30
+			\item
+				Vote (median rule) to determine the amount each player in the group will invest in increasing contribution productivity
+			\item
+				Contribution productivity increases by 0.01 multiplied by the investment
+		\end{itemize}
+	
+		\[
+			\text{Contribution productivity} = M_t = M_{t-1} + 0.01 \cdot I_t
+		\]
+		\[
+			\text{for } t = [1..10]
+		\]
+		\[
+			M_0 = 0.3
+		\]
+		
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Contribution Stage} 
+		
+		Players decide how to allocate their remaining money between private consumption and public good. \\~\\
+		
+		Payoff:
+		\[
+			\pi_{it} = \omega - I_t - c_{it} + M_t \sum c_{jt}
+		\]
+		
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Example} 
+		Example ($M_0 = 0.3$):
+		\begin{block}{Table}
+			\begin{center}
+				\begin{tabular}{ | c | c | c | c | c | c | c |}
+					\hline
+					Players	& $\omega$	& $I_t$						& $M_t$					& $C_{it}$	& $M_t \sum c_{jt}$			& $\pi_{it}$	\\ \hline
+					1		& $10$		& \multirow{4}{*}{$3$}		& \multirow{4}{*}{0.33}	& $7$		& \multirow{4}{*}{$4.95$}	& $4.95$		\\ 
+					2		& $10$		& 							&						& $5$		&							& $6.95$		\\ 
+					3		& $10$		& 							&						& $3$		&							& $8.95$		\\ 
+					4		& $10$		& 							&						& $0$		&							& $11.95$		\\ \hline
+				\end{tabular}
+			\end{center}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Potential Outcomes} 
+
+		\begin{itemize}
+			\item
+				\textbf{The Lowest Payoff outcome.}
+				How would the players act to get the lowest possible payoffs?
+				What are the lowest possible payoffs?
+			\item
+				\textbf{The Nash Equilibrium.}
+				What would happen if each player acted in his own interest?
+			\item 
+				\textbf{The Socially Optimal outcome.}
+				How should the players act so that the sum of payoffs is maximized?
+				What is this sum of payoffs?
+		\end{itemize}
+	\end{frame}
