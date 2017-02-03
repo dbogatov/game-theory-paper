@@ -13,8 +13,7 @@ artifacts:
   artifacts:
     paths:
     - paper/dist/paper.pdf
-	- presentation/dist/presentation.pdf
-	- ipe-submission/paper.docx
+    - presentation/dist/presentation.pdf
+    - ipe-submission/paper.docx
   only:
     - master
-	
