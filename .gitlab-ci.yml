@@ -1,0 +1,20 @@
+stages:
+- build
+
+artifacts:
+  image: tianon/latex
+  stage: build
+  before_script:
+  - apt-get install enscript
+  script:
+  - cd paper && ./build.sh
+  - cd ../presentation && ./build.sh
+  - cd ..
+  artifacts:
+    paths:
+    - paper/dist/paper.pdf
+	- presentation/dist/presentation.pdf
+	- ipe-submission/paper.docx
+  only:
+    - master
+	
