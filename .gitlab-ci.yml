@@ -9,6 +9,7 @@ artifacts:
   script:
   - cd paper && ./build.sh
   - cd ../presentation && ./build.sh
+  - cd ../revisions && ./build.sh
   - cd ..
   artifacts:
     paths:
