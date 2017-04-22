@@ -1,22 +1,254 @@
 \documentclass{article}
 
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\setlength{\parskip}{1em}
+
+\newenvironment{itquote}
+	{\begin{quote}\itshape}
+	{\end{quote}\ignorespacesafterend}
+\newenvironment{itpars}
+	{\par\itshape}
+	{\par}
+
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
 \begin{document}
 
-	Dear reviewers, thank you for the time you put in reviewing my work and for the detailed feedback you provided. All points of feedback have been carefully addressed. Below you will find a brief summary of the edits. This list is not exhaustive. 
+	I would like to start by thanking Editor Holly Brueggman for the opportunity to revise and for her comments and suggestions. I have done my best to make most of the helpful and constructive feedback. Below you will find a summary of my revisions.
 
-	\section*{Revisions}
+	\section*{Reviewer's feedback}
+
+		\begin{itpars}
+
+			Dmytro Bogatov:
+
+			Thank you again for submitting your paper to Issues in Political Economy. Over the past month the editorial board has extensively reviewed your submission. As you can see from the attached comments, the reviewers were enthusiastic about your paper and recommend it for acceptance in the IPE. I am reaching out today to congratulate you on the conditional acceptance of your paper to the journal. After several rounds of reviewing and editing, the board has a few recommendations for amendments to your final submission before publishing, which are included in the following pages of this letter.
+
+			Once you have incorporated the revisions, please return the final draft to me via email no later than May 1, 2017. If you are able to return the finalized paper sooner, it may be eligible for early publishing on the IPE website. Please feel free to reach out to me at hbrueggman@elon.edu if you have any questions or concerns. Thank you again for your submission and best of luck with the revisions.
+
+			Holly Brueggman \\
+			Elon University  \\
+			Editor, IPE 2017 \\
+			hbrueggman@elon.edu
+
+		\end{itpars}
+
+		\subsection*{Summary}
+		
+			\begin{itpars}
+
+				This paper focuses on the understanding of behavior of people contributing to public goods. Public goods often are taken advantage of by what is called a ‘free rider.' To minimize the number of free riders, this paper looks at what it takes to reach equilibrium, what the lowest possible payoff is, and how we can reach a behavior that is socially favorable for all of those who have access to this public good.
+
+				To further support the notion that this is an important topic the author refers to previous research conducted by an array of different academics that have all turned up results that were inconclusive. The author bases the current work on the game by Ngo and Smith 2016, and goes into depth on the two stages of the game and how the game is played and uses examples throughout the paper. To conclude the author determines that the optimum outcome is to have players invest until certain a period then only contribute, this provides the optimum outcome for all of those involved.
+
+			\end{itpars}
+
+		\subsection*{Concluding Paragraph}
+
+			\begin{itpars}
+			
+				The data was very comprehensive and created a good argument in favor of the author's argument. The author suggested that he created a model to analyze the potential outcomes of the game, and determined that the optimum outcome is that of people investing to a certain point then only contributing. Through this the public good would be the most optimum for all involved and would deter people from being free riders.
+
+				The author could have expanded his literature review, it seemed like it was a quick skim over others who had done similar research but didn't really elaborate on how or what roadblocks they ran into. The author also could expand a little bit more on the issues that the general public could face with these public goods if we continue to have free riders.
+				
+				In all I think the paper is looking at a very interesting topic and I think that the author has good information. The argument is sound and I liked that the author used different examples to show the many different potential outcomes, these all further cement the finding of investing to a certain period then contributing. I would accept this paper under the condition that edits were made and that the background was expanded upon a bit.
+
+			\end{itpars}
+
+	\clearpage
+
+		Holly Brueggman \\
+		Elon University  \\
+		Editor, IPE 2017
+
+		\section*{Editor's specific comments (in no particular order)}
 
 		\begin{enumerate}
 			\item 
-				Introduction has been improved to include better description of the outcomes that will be analyzed.
+				\begin{itquote}
+
+					The author of this work does have a clear purpose and the argument is linear. I would suggest that the author provide more background information on the topic of Nash Equilibrium and other potential outcomes. The author even mentions that these topics are straightforward, which may not be the case for all readers.
+
+				\end{itquote}
+
+				I think it is reasonable, as I indeed mention "straightforward" assuming a certain level of the readers, when I should not have done so. I have rewritten the first paragraph to include more background information on potential outcomes and Nash Equilibrium (page 1).
+
+				\begin{itpars}
+
+					In this paper, I present a dynamic, voluntary contribution mechanism, public good game and solve it for the lowest payoff, Nash Equilibria and socially optimal outcomes. In the lowest payoff scenario, a team gets the smallest possible payoff. In equilibrium case, team players act in their own interest in the light of what everyone else is doing. While the lowest payoff and Nash Equilibria cases are relatively straightforward, I concentrate on the socially optimal outcome. In that case, players act in a team's interest to maximize team's payoff. To derive the solution for the socially optimal outcome, I build a mathematical model, simplify it, then use computational methods and regression analysis to derive a generic analytical solution.
+
+				\end{itpars}
+
 			\item
-				Each assumption has been improved to provide better explanation and reasoning behind it.
+				
+				\begin{itquote}
+
+					The theory behind the argument is sound and provides concrete evidence of it being a strong argument. I will say that there are a few assumptions that are made throughout the theory that could be teased out a bit more to fully clarify these assumptions.
+
+				\end{itquote}
+
+				You are right, there is some work that needs to be done on assumptions. I have elaborated more on them and now I include more detailed reasoning behind both of my assumptions.
+
+				A sentence has been added to better explain the first argument that a player should not keep hist mony after both stages in the optimal case (page 9): 
+
+				\begin{itpars}
+					
+					The theory behind the argument is sound and provides concrete evidence of it being a strong argument. I will say that there are a few assumptions that are made throughout the theory that could be teased out a bit more to fully clarify these assumptions.
+				
+				\end{itpars}
+
+				A paragraph explaining the reasoning behind the second argument (that player needs to only invest, then only contribute) has been improved (page 11):
+
+				\begin{itpars}
+
+					This assumption is based on the fact that the value of an investment declines and the value of a contribution grows with time. Investment after contribution is always nonoptimal, since at any stage of the game a player will get higher payoff investing then contributing than doing the opposite with the same amounts. However, a player needs to switch to contributing at some point as we have seen in the lowest payoff scenario.
+
+				\end{itpars}
+
 			\item
-				All suggested grammatical edits have been made. I also visited Writing Center to address those inconsistencies that may have been overlooked.
+				
+				\begin{itquote}
+
+					With the use of the graphs and his models, the author does fully defend his argument. The examples through the paper show the different outcomes of people investing and contributing and how there is an ideal outcome and that is through investing to a certain point then contributing, which provides the best outcome for all.
+				
+				\end{itquote}
+
+				Thank you!
+
 			\item
-				A paragraph has been added describing the negative consequences of "free rider" problem.
+				
+				\begin{itquote}
+			
+					The author uses other writings to show that their findings were inconclusive. The author uses ‘The Game' from Ngo and Smith 2016 to make his argument, which is compelling and there is a logical way the author found his way to the final model. The author made clear assumptions that should not be in contention because the assumptions are sound. The author doesn't suggest that any of the final outcomes had any problems; the problems were addressed earlier when he changed the model based on those assumptions to make the regressions more accurate. Through his progression and explanations of why some assumptions were made, I was convinced by his findings and regressions.
+
+				\end{itquote}
+
+				Thank you!
+
 			\item
-				A section on existing research has been improved to include deeper description of what other researchers did and what conclusions they have drawn.
+				
+				\begin{itquote}
+			
+					A suggestion to increase believability really is in the tone of the paper. I think that the work and regressions are obviously there and they are captivating and interesting but some parts of the paper seemed like the tone was more talking down to readers while others made the argument more relatable to readers. The parts that related to readers, which makes it easier to believe is when he talked about his regressions and how he had to assume things. As for the material, the graphs and the data in the appendix make it hard to questions the results the author came to.
+
+				\end{itquote}
+
+				Thank you!
+
+			\item
+
+				\begin{itquote}
+			
+					Yes, the author used several charts and graphs throughout the paper. He did a good job of incorporating the different potential outcomes and what they looked like over the eleven different periods of the game. With these different outcomes, it allowed readers to visualize the data and the numbers that were concluded from the regressions. I think the number of charts in this paper is suitable for its length, and all serve a purpose so I would not suggest removing any of them.
+
+				\end{itquote}
+
+				Thank you!
+
+			\item
+
+				\begin{itquote}
+
+					This paper didn't have many grammatical errors but there were a few words that were added to lines that were unnecessary:
+
+					\begin{itemize}
+						\item 
+
+							“A Nash Equilibrium occurs when players invest any amount and contribute all or nothing depending on the contribution productivity” – Abstract
+
+							- can remove A from the beginning of the sentence
+
+						\item
+
+							“Wikipedia needs thousands of high qualified encyclopedists, millions of dollars and a team of software engineers to function” – page 2
+							
+							- change high to highly or high-qualified
+	
+							- not sure if encyclopedists is a word but am unsure what to use instead
+
+						\item
+							
+							“Therefore, any investment decision will lead to a equilibrium” – page 6
+							
+							- can remove a or make an
+
+						\item
+						
+							“Thinking of a single period I can define a function f of investment I and contribution C that returns a payoff” – page 9
+							
+							- I would but commas around the variable (“...define a function, f, of investment, i, ...”
+
+						\item
+							
+							“Let me instead introduce a new variable p as a fraction of endowment which a player invests.” – page 9
+						
+							- same as above about the commas
+
+						\item
+
+							“I got a quadratic formula with the error value equal to 0 which means perfect fit.” – page 11
+							
+							- insert comma after 0
+
+					\end{itemize}
+
+
+				\end{itquote}
+
+				Thank you for catching those mistakes! All of what was mentioned were corrected according to the feedback. "encyclopedists" is indeed a word (people, who write encyclopedia), here is the origin of the word: http://www.iep.utm.edu/encyclop/.
+
+			\item
+
+				\begin{itquote}
+
+					The author could have expanded his literature review, it seemed like it was a quick skim over others who had done similar research but didn't really elaborate on how or what roadblocks they ran into. The author also could expand a little bit more on the issues that the general public could face with these public goods if we continue to have free riders.
+
+				\end{itquote}
+
+				I should have elaborated more on the literature review, and I did it in this revision. In particular, the description of work of Marwell and Ames has been improved with the following paragraph (page 2):
+
+				\begin{itpars}
+
+					Gerald Marwell and Ruth E. Ames test a strong free rider hypothesis by a series of 12 experiments and find it not applicable to real world situations. They tested two versions of free rider hypothesis – weak and strong – with experiments. “[T]he ‘weak’ version of the free-rider hypothesis, … states that the voluntary provision of public goods by groups will be sub-optimal and the ‘strong’ version, … argues that (virtually) no public goods at all will be provided through voluntary means.” They have found that strong version of free rider hypothesis is not practically supported, while the “weak” version is. [Marwell and Ames (1981)].
+
+				\end{itpars}
+
+				A paragraph has been added to address the potential problems general public may face because of free riders (page 2:
+
+				\begin{itpars}
+
+					It is important to solve or mitigate the problem of “free riders” as it may have negative consequences. As more people start to “free ride”, the incentive to pay for the good decreases and even more people prefer not to contribute. This self-reinforcing process will lead to overconsumption, exhaustion or even destruction of the public good. At certain point, the system or service will not have enough resources to operate.
+
+				\end{itpars}
+
 		\end{enumerate}
+
+	\clearpage
+
+		\section*{Other improvements to the paper}
+
+			In addition to reviewer's feedback revisions, I have made a number of other improvements I think are appropriate.
+
+			\begin{itemize}
+				\item 
+
+					I have made my references consistent - Last name, First initial, Second Initial. For example, Isaac, R. M.
+
+				\item
+
+					I have put my references in alphabetical order
+
+				\item
+
+					
+
+			\end{itemize}
 
 \end{document}
