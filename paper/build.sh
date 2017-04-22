@@ -23,7 +23,7 @@ pdfjoin dist/${JOBNAME}.pdf dist/APPENDIX_A.pdf dist/APPENDIX_B.pdf --outfile di
 
 echo "Removing build files..."
 
-rm dist/*.{aux,log}
+rm dist/*.{aux,log,out}
 rm dist/APPENDIX_*.pdf
 
 echo "Done."
