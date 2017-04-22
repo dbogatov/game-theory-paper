@@ -7,6 +7,7 @@ JOBNAME=paper
 
 echo "Generating document..."
 
+rm -rf $OUTDIR
 mkdir -p $OUTDIR
 
 # LaTeX needs >1 compilations for references
