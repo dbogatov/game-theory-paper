@@ -5,7 +5,7 @@ artifacts:
   image: tianon/latex
   stage: build
   before_script:
-  - apt-get install enscript
+  - apt-get install -y enscript
   script:
   - cd paper && ./build.sh
   - cd ../presentation && ./build.sh
@@ -17,3 +17,4 @@ artifacts:
     - revisions/dist/revision.pdf
     - presentation/dist/presentation.pdf
     - ipe-submission/paper.docx
+    - ipe-submission/paper.pdf
