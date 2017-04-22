@@ -3,7 +3,7 @@
 INTERACTION=nonstopmode
 OUTDIR=dist
 COMPILATIONS=3
-JOBNAME=presentation
+JOBNAME=revision
 
 echo "Generating document..."
 
@@ -13,7 +13,7 @@ mkdir -p $OUTDIR
 # LaTeX needs >1 compilations for references
 for (( i=1; i<=$COMPILATIONS; i++ ))
 do
-	xelatex --interaction=${INTERACTION} -output-directory=${OUTDIR} -jobname=${JOBNAME} src/main.tex &>/dev/null
+	xelatex --interaction=${INTERACTION} -output-directory=${OUTDIR} -jobname=${JOBNAME} revision.tex &>/dev/null
 done
 
 echo "Done."

@@ -7,6 +7,9 @@ JOBNAME=paper
 
 echo "Generating document..."
 
+rm -rf $OUTDIR
+mkdir -p $OUTDIR
+
 # LaTeX needs >1 compilations for references
 for (( i=1; i<=$COMPILATIONS; i++ ))
 do
@@ -23,7 +26,7 @@ pdfjoin dist/${JOBNAME}.pdf dist/APPENDIX_A.pdf dist/APPENDIX_B.pdf --outfile di
 
 echo "Removing build files..."
 
-rm dist/*.{aux,log}
+rm dist/*.{aux,log,out}
 rm dist/APPENDIX_*.pdf
 
 echo "Done."

@@ -1,22 +1,26 @@
 \section{Introduction}
 
-	In this paper, I present a dynamic, voluntary contribution mechanism, public good game and solve it for the lowest payoff, Nash Equilibria and socially optimal outcomes. While the lowest payoff and Nash Equilibria cases are relatively straightforward, I concentrate on the socially optimal outcome. I build a mathematical model, simplify it, then use computational methods and regression analysis to derive an analytical solution.
+	In this paper, I present a dynamic, voluntary contribution mechanism, public good game and solve it for the lowest payoff, Nash Equilibria and socially optimal outcomes. In the lowest payoff scenario, a team gets the smallest possible payoff. In equilibrium case, team players act in their own interest in the light of what everyone else is doing. While the lowest payoff and Nash Equilibria cases are relatively straightforward, I concentrate on the socially optimal outcome. In that case, players act in a team's interest to maximize team's payoff. To derive the solution for the socially optimal outcome, I build a mathematical model, simplify it, then use computational methods and regression analysis to derive a generic analytical solution.
 
 	Public goods are goods that are non-excludable and non-rival in consumption. Non-excludability means that people cannot be excluded or restricted from using the good. Non-rivalry means that the use of the good by one individual does not reduce its availability to others. One simple example of a public good is a hurricane siren in a small town. No one can be excluded from using the siren and the use of the siren does not affect its availability to other people. Another example of a public good is an open sourced, open licensed software. It is almost impossible to exclude people from using the software and the use of the software by anyone does not affect its availability to anyone else.
 	
 	The challenge associated with the voluntary provision of public goods is the free rider problem. The problem occurs when those who benefit from a public good or service do not pay for it or do not contribute to it. This leads to the non-production or under-provision of a good or service. As long as this problem is not solved, the voluntary provision of the public good may be ineffective and unsuccessful. Consider the example of national defense. This good is public since it is neither rival nor excludable. The free rider problem may occur if a part of the society decides not to pay for it. The good will remain public, but provision of the good will be hurt due to the lack of contributions. Moreover, the other people, those who pay, will have an incentive to stop paying too as they might not want to pay for "free riders".
 	
-	Consider an example of a public good that needs contributions in order to operate. Wikipedia is an open platform where people can post articles and other people can read them. While the service is free, it does need resources, technology and infrastructure to operate. Wikipedia needs thousands of high qualified encyclopedists, millions of dollars and a team of software engineers to function. All of these resources are provided voluntarily, thus, keeping the good non-excludable.
+	Consider an example of a public good that needs contributions in order to operate. Wikipedia is an open platform where people can post articles and other people can read them. While the service is free, it does need resources, technology and infrastructure to operate. Wikipedia needs thousands of highly qualified encyclopedists, millions of dollars and a team of software engineers to function. All of these resources are provided voluntarily, thus, keeping the good non-excludable.
+
+	It is important to solve or mitigate the problem of "free riders" as it may have negative consequences. As more people start to "free ride", the incentive to pay for the good decreases and even more people prefer not to contribute. This self-reinforcing process will lead to overconsumption, exhaustion or even destruction of the public good. At certain point, the system or service will not have enough resources to operate.
 	
 	It is important to understand people's behavior when they decide whether or not to contribute to a public good. It is always tempting to avoid contributing, thus, become a free rider. To understand this behavior it is helpful to analyze how the equilibrium may be achieved, what the lowest possible payoff is, and how to achieve socially optimal behavior. This analysis is a primary goal of the paper.
 
-	A number of experiments were conducted on the free rider problem and public good provision. Gerald Marwell and Ruth E. Ames test a strong free rider hypothesis by a series of 12 experiments and find it not applicable to real world situations [Marwell and Ames (1981)]. Isaac, Thomas and Walker attempt to reconcile divergent experimental results of other papers - those which concluded that individuals always free ride a lot, free ride a little or never free ride. They conclude that contribution decision depends on the conditions of the experiment [Isaac, Walker and Thomas (1984)]. John O Ledyard has a chapter in his textbook dedicated to public good games experiments. He carefully describes how such experiments need to be conducted, and how certain aspects of experimental setup affect the end results [Ledyard (1995)]. Finally,  Ananish Chaudhuri surveys a large number of papers on public good games in his work. He analyses the effectiveness of monetary and non-monetary punishments on sustaining cooperation in public good games. He concludes that monetary punishments are generally effective, however, there are certain caveats such as cost-effectiveness of the punishment itself and the issue of "anti-social" punishments. He concludes that there are other, non-monetary, punitive measures such as expressions of disapproval or social exclusion [Chaudhuri (2011)].
+	A number of experiments were conducted on the free rider problem and public good provision. Gerald Marwell and Ruth E. Ames test a strong free rider hypothesis by a series of 12 experiments and find it not applicable to real world situations [Marwell and Ames (1981)]. They tested two versions of free rider hypothesis – weak and strong – with experiments. "[T]he ‘weak' version of the free-rider hypothesis, … states that the voluntary provision of public goods by groups will be sub-optimal and the 'strong' version, … argues that (virtually) no public goods at all will be provided through voluntary means." They have found that strong version of free rider hypothesis is not practically supported, while the "weak" version is. [Marwell and Ames (1981)].
+	
+	Isaac, Thomas and Walker attempt to reconcile divergent experimental results of other papers - those which concluded that individuals always free ride a lot, free ride a little or never free ride. They conclude that contribution decision depends on the conditions of the experiment [Isaac, Walker and Thomas (1984)]. John O Ledyard has a chapter in his textbook dedicated to public good games experiments. He carefully describes how such experiments need to be conducted, and how certain aspects of experimental setup affect the end results [Ledyard (1995)]. Finally,  Ananish Chaudhuri surveys a large number of papers on public good games in his work. He analyses the effectiveness of monetary and non-monetary punishments on sustaining cooperation in public good games. He concludes that monetary punishments are generally effective, however, there are certain caveats such as cost-effectiveness of the punishment itself and the issue of "anti-social" punishments. He concludes that there are other, non-monetary, punitive measures such as expressions of disapproval or social exclusion [Chaudhuri (2011)].
 
-	To analyze people's decision-making regarding contributing to public goods, I have examined the game of Ngo and Smith (2016). In the following sections I will describe the game and its rules, and provide an example of one period (round) in the game. I will consider three possible outcomes - the lowest payoff, Nash Equilibria strategies and socially optimal behavior, concentrating on the latter one. While analyzing the socially optimal behavior, I will construct a mathematical model first, then solve it computationally and finally apply regression analysis tools to derive a generic solution. At the end, I will summarize the paper.
+	To analyze people's decision-making regarding contributing to public goods, I have examined the game of Ngo and Smith (2017). In the following sections I will describe the game and its rules, and provide an example of one period (round) in the game. I will consider three possible outcomes - the lowest payoff, Nash Equilibria strategies and socially optimal behavior, concentrating on the latter one. While analyzing the socially optimal behavior, I will construct a mathematical model first, then solve it computationally and finally apply regression analysis tools to derive a generic solution. At the end, I will summarize the paper.
 
 \section{The Game}
 
-	The game [Ngo and Smith (2016)] occurs among groups of $4$ people and consists of $10$ periods. Each period has two stages: an investment stage and a contribution stage. At the start of every period, all players receive endowments of $10$.
+	The game [Ngo and Smith (2017)] occurs among groups of $4$ people and consists of $10$ periods. Each period has two stages: an investment stage and a contribution stage. At the start of every period, all players receive endowments of $10$.
 	
 	\subsection{Investment Stage}
 	
@@ -87,7 +91,7 @@
 
 		\begin{figure}
 			\begin{center}
-				\includegraphics[width=8.4cm]{resources/lowest.png}
+				\includegraphics[width=8.4cm]{resources/eps/lowest.eps}
 				\caption{Lowest possible payoff} 
 				\label{fig:lowest}
 			\end{center}
@@ -142,7 +146,7 @@
 
 			\begin{figure}
 				\begin{center}
-					\includegraphics[width=8.4cm]{resources/nash-highest.png}
+					\includegraphics[width=8.4cm]{resources/eps/nash-highest.eps}
 					\caption{Highest possible equilibrium payoff} 
 					\label{fig:nash-highest}
 				\end{center}
@@ -152,7 +156,7 @@
 
 			\begin{figure}
 				\begin{center}
-					\includegraphics[width=8.4cm]{resources/nash-nocontrib.png}
+					\includegraphics[width=8.4cm]{resources/eps/nash-nocontrib.eps}
 					\caption{Equilibrium payoff with no investments and no contributions} 
 					\label{fig:nash-nocontrib}
 				\end{center}
@@ -169,7 +173,7 @@
 
 			\begin{figure}
 				\begin{center}
-					\includegraphics[width=8.4cm]{resources/nash-lowest.png}
+					\includegraphics[width=8.4cm]{resources/eps/nash-lowest.eps}
 					\caption{Lowest possible equilibrium payoff} 
 					\label{fig:nash-lowest}
 				\end{center}
@@ -181,7 +185,7 @@
 	
 		\subsubsection{The mathematical model}
 	
-			To approach this problem I have to build a mathematical model. Thinking of a single period I can define a function $f$ of investment $I$ and contribution $C$ that returns a payoff. Let me define this function for the period after the $t_\text{th}$ period.
+			To approach this problem I have to build a mathematical model. Thinking of a single period I can define a function, $f$, of investment, $I$, and contribution, $C$, that returns a payoff. Let me define this function for the period after the $t_\text{th}$ period.
 			
 			\[
 				f(I, C) = [M_t \cdot 4 \cdot C] + [\omega - C - I]
@@ -195,7 +199,7 @@
 
 			$M_t \cdot 4 \cdot C$ is payoff and $\omega - C - I$ is the amount left after both stages.
 			
-			Since every $\$1$ contributed will give at least $0.3 \cdot 4 = \$1.2$ back, keeping money in the contribution is not socially optimal and I can state an assumption:
+			Since every $\$1$ contributed will give at least $0.3 \cdot 4 = \$1.2$ back, keeping money in the contribution is not socially optimal. A player will always be better off contributing a unit than keeping it. Therefore, I can state an assumption:
 			
 			\begin{displayquote}
 				\emph{
@@ -203,7 +207,7 @@
 				} 
 			\end{displayquote} 
 		
-			Now, the term $\omega - C - I$ equals $0$, so I see that $I = \omega - C$, which means that I c§an eliminate one of the two variables - $C$ or $I$.	Let me instead introduce a new variable $p$ as a fraction of endowment which player invests.
+			Now, the term $\omega - C - I$ equals $0$, so I see that $I = \omega - C$, which means that I c§an eliminate one of the two variables - $C$ or $I$.	Let me instead introduce a new variable, $p$, as a fraction of endowment which player invests.
 
 			Now $I = p \cdot \omega$ and $C = (1-p) \cdot \omega$. Let me redefine the function:
 			
@@ -273,15 +277,15 @@
 
 			\begin{figure}
 				\begin{center}
-					\includegraphics[width=8.4cm]{resources/function.png}
+					\includegraphics[width=8.4cm]{resources/eps/function.eps}
 					\caption{Function of payoff depending on time when a player switches to contribution - $f(p)$} 
 					\label{fig:function}
 				\end{center}
-			\end{figure}			 
+			\end{figure}
 		
 		\subsubsection{Regression Analysis}
 		
-			The last step is to try to "estimate" the formula for the data. I enter the data in the regression tool (\url{http://www.xuru.org/rt/pr.asp}), give it a potential mathematical model (in my case it is a quadratic formula $ax^2 + bx + c$) and run it. The tool would estimate the formula with numeric coefficients and error value. In this case, I got a quadratic formula with the error value equal to $0$ which means perfect fit. Now, let me derive a generic formula so that it fits numeric one. This is an artistic process - I play around with numbers trying to compose variables such that they fit the quadratic formula.
+			The last step is to try to "estimate" the formula for the data. I enter the data in the regression tool (\url{http://www.xuru.org/rt/pr.asp}), give it a potential mathematical model (in my case it is a quadratic formula $ax^2 + bx + c$) and run it. The tool would estimate the formula with numeric coefficients and error value. In this case, I got a quadratic formula with the error value equal to $0$, which means perfect fit. Now, let me derive a generic formula so that it fits numeric one. This is an artistic process - I play around with numbers trying to compose variables such that they fit the quadratic formula.
 			
 			\[
 				f(x) = 400 \cdot \left[ - m \cdot \omega \cdot x^2 + (m \cdot \omega \cdot T - M_0) \cdot x + M_0 \cdot T \right]
@@ -327,7 +331,7 @@
 
 			\begin{figure}
 				\begin{center}
-					\includegraphics[width=8.4cm]{resources/social.png}
+					\includegraphics[width=8.4cm]{resources/eps/social.eps}
 					\caption{Socially optimal outcome payoff} 
 					\label{fig:social}
 				\end{center}
@@ -349,18 +353,18 @@
 
 \section{References}
 
-	Isaac, R.M. and Walker, J.M. (1988). Group size effects of public goods provision: An experimental examination. Quarterly Journal of Economics, 103(1), 179–199.
-
-	John Nash (1951). Non-Cooperative Games. The Annals of Mathematics, Second Series, Volume 54, Issue 2 (Sep., 1951), 286-295
-
-	Robert Gibbons (1997). An Introduction to Applicable Game Theory. The Journal of Economic Perspectives, Vol. 11, No. 1. (Winter, 1997), pp. 127-149.
-
-	Marwell and Ames (1981). Economists Free Ride, Does Anyone Else? Journal of Public Economics 15 (1981) 295-310. North-Holland Publishing Company.
-
-	Mark R. Isaac, James M. Walker and Susan H. Thomas (1984). Divergent Evidence on Free Riding: An Experimental Examination of Possible Explanations. Public Choice (pre-1986), May 1984, p. 113.
-
-	John O Ledyard (1995). Public Goods: A Survey on Experimental Research. Games and Economic Behavior, 07/1995, Volume 10, Issue 1. 
+	Chaudhuri, A. (2011). Sustaining Cooperation in Laboratory Public Goods Experiments: a Selective Survey of the Literature. Experimental Economics, 03/2011, Volume 14, Issue 1.
 	
-	Ananish Chaudhuri (2011). Sustaining Cooperation in Laboratory Public Goods Experiments: a Selective Survey of the Literature. Experimental Economics, 03/2011, Volume 14, Issue 1.
+	Gibbons, R. (1997). An Introduction to Applicable Game Theory. The Journal of Economic Perspectives, Vol. 11, No. 1. (Winter, 1997), pp. 127-149.
 
-	Ngo and Smith (2016). Investing in Durable Technologies for Producing Public Goods. Worcester Polytechnic Institute.
+	Isaac, R. M. and Walker, J. M. (1988). Group size effects of public goods provision: An experimental examination. Quarterly Journal of Economics, 103(1), 179–199.
+
+	Isaac, R. M., Walker, J. M. and Thomas S. H. (1984). Divergent Evidence on Free Riding: An Experimental Examination of Possible Explanations. Public Choice (pre-1986), May 1984, p. 113.
+	
+	Ledyard, J. O. (1995). Public Goods: A Survey on Experimental Research. Games and Economic Behavior, 07/1995, Volume 10, Issue 1. 
+
+	Marwell, G. and Ames R. E (1981). Economists Free Ride, Does Anyone Else? Journal of Public Economics 15 (1981) 295-310. North-Holland Publishing Company.
+	
+	Nash, J. (1951). Non-Cooperative Games. The Annals of Mathematics, Second Series, Volume 54, Issue 2 (Sep., 1951), 286-295
+
+	Ngo, J. and Smith, A. (2017). A Public Good Game with Endogenous Technological Growth. Worcester Polytechnic Institute Working Paper.
